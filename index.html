@@ -1,7 +1,43 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>BotBoot</title>
+    <title>Verify Bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .container p {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 40px;
+            padding: 5px;
+            text-align: center;
+        }
+        input[type="button"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+    </style>
     <script type="text/javascript">
         var a = Math.ceil(Math.random() * 10);
         var b = Math.ceil(Math.random() * 10);       
@@ -9,7 +45,7 @@
 
         function DrawBotBoot() {
             document.write("What is "+ a + " + " + b +"? ");
-            document.write("<input id='BotBootInput' type='text' maxlength='2' size='2'/>");
+            document.write("<input id='BotBootInput' type='text' maxlength='2'/>");
         }    
 
         function ValidBotBoot() {
@@ -23,8 +59,11 @@
     </script>
 </head>
 <body>
-    <p>Are you human?</p>
-    <script type="text/javascript">DrawBotBoot()</script>
-    <input id="Button1" type="button" value="Check" onclick="ValidBotBoot();"/>
+    <div class="container">
+        <h1>Are you human?</h1>
+        <script type="text/javascript">DrawBotBoot()</script>
+        <br>
+        <input id="Button1" type="button" value="Check" onclick="ValidBotBoot();"/>
+    </div>
 </body>
 </html>
