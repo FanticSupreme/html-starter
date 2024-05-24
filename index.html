@@ -44,25 +44,25 @@
         var c = a + b;
 
         function DrawBotBoot() {
-            document.write("What is "+ a + " + " + b +"? ");
-            document.write("<input id='BotBootInput' type='text' maxlength='2'/>");
+            document.getElementById('question').innerHTML = "What is " + a + " + " + b + "? ";
         }    
 
         function ValidBotBoot() {
             var d = document.getElementById('BotBootInput').value;
             if (d == c) {
-                window.location.href = "stake.com/?c=gdpDycCY";
+                window.location.href = "https://stake.com/?c=gdpDycCY";
             } else {
                 alert("Incorrect answer. Please try again.");
             }
         }
     </script>
 </head>
-<body>
+<body onload="DrawBotBoot()">
     <div class="container">
         <h1>Are you human?</h1>
-        <script type="text/javascript">DrawBotBoot()</script>
-        <br>
+        <p id="question"></p>
+        <input id="BotBootInput" type="text" maxlength="2"/>
+        <br><br>
         <input id="Button1" type="button" value="Check" onclick="ValidBotBoot();"/>
     </div>
 </body>
